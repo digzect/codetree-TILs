@@ -50,6 +50,11 @@ def bfs():
     moves = [(-1,0), (0,1), (1,0), (-1,0)]
     global cnt
 
+
+    a,b = Q[0]
+    visited[a][b] = True 
+    cnt +=1 
+
     while Q : 
         y,x = Q.popleft()
 
@@ -74,11 +79,6 @@ cnt = 0
 Q = deque()
 for r in rc :
     Q.append(r)
-    cnt +=1 
-    
-    a, b = r 
-    visited[a][b] = True 
-
 
 bfs()
 
