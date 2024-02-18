@@ -67,14 +67,19 @@ def bfs():
 
 
 
+cnt = 0 
 
 
 #큐에 인잇
 Q = deque()
 for r in rc :
     Q.append(r)
+    cnt +=1 
+    
+    a, b = r 
+    visited[a][b] = True 
 
-cnt = 0 
+
 bfs()
 
 
