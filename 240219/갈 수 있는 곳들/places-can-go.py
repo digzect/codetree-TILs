@@ -47,7 +47,7 @@ def can_visit(y,x):
 
 def bfs():
     
-    moves = [(-1,0), (0,1), (1,0), (-1,0)]
+    moves = [(-1,0), (0,1), (1,0), (0,-1)]
     global cnt
 
 
