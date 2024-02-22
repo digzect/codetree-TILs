@@ -33,8 +33,6 @@ result =[[0 for _ in range(n)] for _ in range(n)]
 
 for nn in range(n):
     lis = list(map(int, input().split()))
-    # print(lis)
-
     for li in range(n):
         if lis[li] == 2 : 
             human.append([nn,li])
@@ -42,20 +40,12 @@ for nn in range(n):
 
 
 
-
-
-
-
 def bfs(yy,xx):
-
     visited = [[False for _ in range(n)] for _ in range(n)]
-
     Q = deque()
     Q.append([yy,xx,0])
     visited[yy][xx] = True 
-    
     moves = [(-1,0), (0,1), (1,0), (0,-1)]
-
 
 
     while Q :
@@ -87,15 +77,12 @@ def bfs(yy,xx):
     #비를피할곳까지 못도착하는 경우 
     return -1
 
-
-
 #모든 human에 대해서
 for huma in human :
     yy, xx = huma
     res = bfs(yy,xx)    
     result[yy][xx] = res 
 
-# print("\n")
 
 #값 결과 출력하기
 for resul in result:
